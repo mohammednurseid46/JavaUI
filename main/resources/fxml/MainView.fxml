@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="mainRoot"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.lms.analytics.controllers.MainController"
+           style="-fx-background-color:#0d1117;">
+</StackPane>

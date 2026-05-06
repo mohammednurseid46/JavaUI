@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lms.analytics.controllers.EnrollmentController"
+            style="-fx-background-color:#f0f2f5;">
+
+    <top>
+        <VBox spacing="10" style="-fx-background-color:white; -fx-padding:15;
+              -fx-border-color:#e2e8f0; -fx-border-width:0 0 1 0;">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Button text="← Back" onAction="#handleBack" styleClass="back-btn"/>
+                <Label text="Enrollment Management" styleClass="page-title"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Filter by Status:" styleClass="form-label"/>
+                <ComboBox fx:id="statusFilterCombo" prefWidth="150"/>
+                <Button text="Filter" onAction="#handleFilterByStatus"
+                        styleClass="button,btn-primary"/>
+                <Button text="↻ Refresh" onAction="#handleRefresh"
+                        styleClass="button,btn-secondary"/>
+                <Button fx:id="sortMenuBtn" text="⇅  Sort"
+                        onAction="#handleShowSortMenu"
+                        style="-fx-background-color:white; -fx-text-fill:#334155;
+                               -fx-border-color:#cbd5e1; -fx-border-width:1.5;
+                               -fx-border-radius:8; -fx-background-radius:8;
+                               -fx-padding:6 14; -fx-font-size:12px;
+                               -fx-font-weight:bold; -fx-cursor:hand;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="totalLabel" style="-fx-text-fill:#2563eb; -fx-font-weight:bold;"/>
+                <Label fx:id="statusLabel" style="-fx-text-fill:#16a34a;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Center: table + search bar + pagination bar (all injected by controller) -->
+    <center>
+        <VBox fx:id="tableContainer" style="-fx-background-color:#f0f2f5;">
+            <TableView fx:id="enrollmentTable">
+                <columns>
+                    <TableColumn fx:id="studentCol" text="Student"         prefWidth="180"/>
+                    <TableColumn fx:id="courseCol"  text="Course"          prefWidth="200"/>
+                    <TableColumn fx:id="dateCol"    text="Enrollment Date" prefWidth="130"/>
+                    <TableColumn fx:id="statusCol"  text="Status"          prefWidth="100"/>
+                    <TableColumn fx:id="gradeCol"   text="Grade"           prefWidth="80"/>
+                </columns>
+                <VBox.vgrow>ALWAYS</VBox.vgrow>
+            </TableView>
+            <!-- Pagination bar injected here by controller -->
+            <HBox fx:id="paginationContainer"/>
+        </VBox>
+    </center>
+
+    <right>
+        <ScrollPane fitToWidth="true" prefWidth="290"
+                    style="-fx-background-color:white; -fx-background:white;
+                           -fx-border-color:#e2e8f0; -fx-border-width:0 0 0 1;">
+            <content>
+                <VBox spacing="12" style="-fx-background-color:white; -fx-padding:16;">
+                    <Label text="Enroll Student"
+                           style="-fx-font-size:15px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+                    <Separator/>
+
+                    <Label text="Student" styleClass="form-label"/>
+                    <ComboBox fx:id="studentCombo" maxWidth="Infinity"/>
+
+                    <Label text="Course" styleClass="form-label"/>
+                    <ComboBox fx:id="courseCombo" maxWidth="Infinity"/>
+
+                    <Button text="✅  Enroll" onAction="#handleEnroll"
+                            maxWidth="Infinity" styleClass="button,btn-primary"/>
+
+                    <Separator/>
+                    <Label text="Selected Enrollment Actions"
+                           style="-fx-font-size:13px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+
+                    <Label fx:id="selectedInfoLabel"
+                           text="← Select an enrollment from the table."
+                           style="-fx-font-size:11px; -fx-text-fill:#64748b; -fx-wrap-text:true;
+                                  -fx-background-color:#f8fafc; -fx-background-radius:6;
+                                  -fx-border-color:#e2e8f0; -fx-border-radius:6; -fx-padding:8;"
+                           wrapText="true"/>
+
+                    <Button text="🔄  Update Status" onAction="#handleUpdateStatus"
+                            maxWidth="Infinity" styleClass="button,btn-primary"/>
+                    <Button text="⊘  Drop Enrollment" onAction="#handleDrop"
+                            maxWidth="Infinity" styleClass="button,btn-danger"/>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </right>
+</BorderPane>

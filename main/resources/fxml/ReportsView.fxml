@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lms.analytics.controllers.ReportsController"
+            style="-fx-background-color:#f0f2f5; -fx-background:#f0f2f5;">
+    <content>
+        <VBox spacing="20" style="-fx-background-color:#f0f2f5; -fx-padding:20;">
+
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Button text="← Back" onAction="#handleBack" styleClass="back-btn"/>
+                <Label text="Reports and Analytics"
+                       style="-fx-font-size:20px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+            </HBox>
+
+            <!-- Report Generator Card — built programmatically by controller -->
+            <StackPane fx:id="reportCardContainer"
+                       style="-fx-background-color:white; -fx-background-radius:10;
+                              -fx-border-color:#e2e8f0; -fx-border-radius:10; -fx-border-width:1;
+                              -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),8,0,0,2);"/>
+
+            <!-- Quick Exports Card -->
+            <VBox spacing="12"
+                  style="-fx-background-color:white; -fx-background-radius:10; -fx-padding:16;
+                         -fx-border-color:#e2e8f0; -fx-border-radius:10; -fx-border-width:1;
+                         -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),8,0,0,2);">
+                <Label text="Quick Exports"
+                       style="-fx-font-size:15px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+                <Separator/>
+                <HBox spacing="10">
+                    <Button text="📄  Accreditation PDF"     onAction="#handleQuickAccreditation" styleClass="button,btn-primary"/>
+                    <Button text="💰  Financial PDF"         onAction="#handleQuickFinancial"     styleClass="button,btn-primary"/>
+                    <Button text="📋  Enrollment PDF"        onAction="#handleQuickEnrollment"    styleClass="button,btn-primary"/>
+                    <Button text="📊  All Enrollments Excel" onAction="#handleExportAllToExcel"   styleClass="button,btn-primary"/>
+                </HBox>
+            </VBox>
+
+        </VBox>
+    </content>
+</ScrollPane>

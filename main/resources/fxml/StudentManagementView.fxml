@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.lms.analytics.controllers.StudentManagementController"
+           style="-fx-background-color:#f0f2f5;"/>

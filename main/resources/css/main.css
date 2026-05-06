@@ -1,0 +1,271 @@
+/* Main Application CSS - Consistent Design Theme */
+
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-base: #2b2b2b;
+    -fx-background: #1e1e1e;
+}
+
+/* Login Screen Styles */
+.login-container {
+    -fx-background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+}
+
+.login-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 20, 0, 0, 10);
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333;
+}
+
+.login-subtitle {
+    -fx-font-size: 14px;
+    -fx-fill: #666;
+}
+
+.login-field {
+    -fx-pref-height: 40;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ddd;
+}
+
+.login-field:focused {
+    -fx-border-color: #667eea;
+}
+
+.login-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 40;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #5a67d8;
+}
+
+.error-label {
+    -fx-text-fill: #e53e3e;
+    -fx-font-size: 12px;
+}
+
+.demo-info {
+    -fx-padding: 10;
+    -fx-background-color: #f7fafc;
+    -fx-background-radius: 5;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    -fx-background-color: #f5f6fa;
+}
+
+.dashboard-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.dashboard-card-title {
+    -fx-font-size: 14px;
+    -fx-fill: #7f8c8d;
+}
+
+.dashboard-card-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+}
+
+/* TableView Styles */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #667eea;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #667eea;
+}
+
+/* Button Styles */
+.primary-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #5a67d8;
+}
+
+.danger-button {
+    -fx-background-color: #e53e3e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    -fx-background-color: #c53030;
+}
+
+.success-button {
+    -fx-background-color: #48bb78;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.success-button:hover {
+    -fx-background-color: #38a169;
+}
+
+/* Form Styles */
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a5568;
+}
+
+.form-field {
+    -fx-pref-height: 35;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #e2e8f0;
+}
+
+.form-field:focused {
+    -fx-border-color: #667eea;
+}
+
+/* Menu Bar Styles */
+.menu-bar {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+}
+
+.menu {
+    -fx-text-fill: white;
+}
+
+.menu-item .label {
+    -fx-text-fill: #2d3748;
+}
+
+/* TabPane Styles */
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.tab {
+    -fx-background-color: #edf2f7;
+    -fx-padding: 10 20;
+}
+
+.tab:selected {
+    -fx-background-color: #667eea;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* Pagination Styles */
+.pagination {
+    -fx-background-color: transparent;
+    -fx-page-information-visible: false;
+}
+
+.pagination .button {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-background-radius: 3;
+}
+
+.pagination .button:focused {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+}
+
+/* ScrollPane Styles */
+.scroll-pane {
+    -fx-background-color: transparent;
+}.scroll-pane .viewport {
+     -fx-background-color: transparent;
+ }
+
+/* ComboBox Styles */
+.combo-box {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5 10;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    -fx-accent: #667eea;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 10;
+}
+
+.progress-bar .track {
+    -fx-background-radius: 10;
+}
+
+/* Chart Styles */
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #667eea; }
+.default-color1.chart-series-line { -fx-stroke: #48bb78; }
+.default-color2.chart-series-line { -fx-stroke: #e53e3e; }
+
+.default-color0.chart-bar { -fx-bar-fill: #667eea; }
+.default-color1.chart-bar { -fx-bar-fill: #48bb78; }
+.default-color2.chart-bar { -fx-bar-fill: #ed8936; }

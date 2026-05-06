@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lms.analytics.controllers.ImportExportController"
+            style="-fx-background-color:#f0f2f5; -fx-background:#f0f2f5;">
+    <content>
+        <VBox spacing="20" style="-fx-background-color:#f0f2f5; -fx-padding:20;">
+
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Button text="← Back" onAction="#handleBack" styleClass="back-btn"/>
+                <Label text="Import / Export Data"
+                       style="-fx-font-size:20px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+            </HBox>
+
+            <!-- Import Card -->
+            <VBox spacing="12"
+                  style="-fx-background-color:white; -fx-background-radius:10; -fx-padding:16;
+                         -fx-border-color:#e2e8f0; -fx-border-radius:10; -fx-border-width:1;
+                         -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),8,0,0,2);">
+                <Label text="📥  Import Data"
+                       style="-fx-font-size:15px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+                <Separator/>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Import Type:" styleClass="form-label"/>
+                    <ComboBox fx:id="importTypeCombo" prefWidth="200"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="CSV File:" styleClass="form-label"/>
+                    <TextField fx:id="selectedFileField" promptText="Select a CSV file..."
+                               prefWidth="320" editable="false"/>
+                    <Button text="Browse..." onAction="#handleBrowseFile"
+                            styleClass="button,btn-secondary"/>
+                </HBox>
+                <Button text="📥  Import" onAction="#handleImport" prefWidth="140"
+                        styleClass="button,btn-primary"/>
+                <Label text="Students CSV: username, full_name, email, student_number, major"
+                       style="-fx-font-size:11px; -fx-text-fill:#94a3b8;"/>
+                <Label text="Courses CSV: course_code, course_name, credits, capacity, price"
+                       style="-fx-font-size:11px; -fx-text-fill:#94a3b8;"/>
+                <Label text="Enrollments CSV: student_id, course_id"
+                       style="-fx-font-size:11px; -fx-text-fill:#94a3b8;"/>
+            </VBox>
+
+            <!-- Export Card -->
+            <VBox spacing="12"
+                  style="-fx-background-color:white; -fx-background-radius:10; -fx-padding:16;
+                         -fx-border-color:#e2e8f0; -fx-border-radius:10; -fx-border-width:1;
+                         -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),8,0,0,2);">
+                <Label text="📤  Export Data"
+                       style="-fx-font-size:15px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+                <Separator/>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Export Type:" styleClass="form-label"/>
+                    <ComboBox fx:id="exportTypeCombo" prefWidth="200"/>
+                </HBox>
+                <Button text="📤  Export" onAction="#handleExport" prefWidth="140"
+                        styleClass="button,btn-primary"/>
+            </VBox>
+
+            <!-- Log Card -->
+            <VBox spacing="8"
+                  style="-fx-background-color:white; -fx-background-radius:10; -fx-padding:16;
+                         -fx-border-color:#e2e8f0; -fx-border-radius:10; -fx-border-width:1;
+                         -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),8,0,0,2);">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Activity Log"
+                           style="-fx-font-size:14px; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
+                    <Button text="Clear" onAction="#handleClearLog"
+                            styleClass="button,btn-secondary" style="-fx-padding:5 12;"/>
+                </HBox>
+                <TextArea fx:id="logArea" prefHeight="150" editable="false"
+                          style="-fx-font-family:monospace; -fx-font-size:12px;"/>
+            </VBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ProgressBar fx:id="progressBar" prefWidth="300" progress="0"/>
+                <Label fx:id="statusLabel" style="-fx-text-fill:#38bdf8; -fx-font-weight:bold;"/>
+            </HBox>
+
+        </VBox>
+    </content>
+</ScrollPane>

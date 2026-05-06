@@ -1,0 +1,108 @@
+/* Dashboard-specific styles */
+
+.dashboard-scroll {
+    -fx-background-color: #f5f6fa;
+    -fx-background: #f5f6fa;
+}
+
+.dashboard-container {
+    -fx-background-color: #f5f6fa;
+}
+
+.dashboard-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 3);
+    -fx-padding: 15;
+}
+
+.dashboard-card-title {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-weight: normal;
+}
+
+.dashboard-card-value {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Stat card hover effect */
+.dashboard-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 5);
+}
+
+/* Chart container */
+.chart-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+}
+
+/* Line chart */
+.line-chart {
+    -fx-background-color: transparent;
+}
+
+.line-chart .chart-plot-background {
+    -fx-background-color: #f8f9fa;
+}
+
+.line-chart .chart-series-line {
+    -fx-stroke-width: 2.5;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #667eea; }
+.default-color0.chart-line-symbol { -fx-background-color: #667eea, white; }
+
+/* Pie chart */
+.pie-chart .chart-pie-label {
+    -fx-font-size: 11px;
+}
+
+.default-color0.chart-pie { -fx-pie-color: #48bb78; }
+.default-color1.chart-pie { -fx-pie-color: #667eea; }
+.default-color2.chart-pie { -fx-pie-color: #e53e3e; }
+
+/* Recent activity table */
+.recent-table .column-header-background {
+    -fx-background-color: #667eea;
+}
+
+.recent-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Status badges */
+.status-enrolled {
+    -fx-background-color: #c6f6d5;
+    -fx-text-fill: #276749;
+    -fx-background-radius: 10;
+    -fx-padding: 2 8;
+}
+
+.status-completed {
+    -fx-background-color: #bee3f8;
+    -fx-text-fill: #2a69ac;
+    -fx-background-radius: 10;
+    -fx-padding: 2 8;
+}
+
+.status-dropped {
+    -fx-background-color: #fed7d7;
+    -fx-text-fill: #9b2c2c;
+    -fx-background-radius: 10;
+    -fx-padding: 2 8;
+}
+
+/* Quick action buttons */
+.quick-action-btn {
+    -fx-pref-width: 160;
+    -fx-pref-height: 50;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
